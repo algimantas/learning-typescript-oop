@@ -1,5 +1,4 @@
 import { Guitar } from "./guitar";
-import { Builder, Type, Wood } from "./types";
 import { GuitarSpec } from "./guitarSpec";
 
 export class Inventory {
