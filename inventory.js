@@ -21,8 +21,8 @@ class Inventory {
         _guitars.set(this, void 0);
         __classPrivateFieldSet(this, _guitars, []);
     }
-    addGuitar(serialNumber, price, builder, model, type, backWood, topWood) {
-        let guitar = new guitar_1.Guitar(serialNumber, price, builder, model, type, backWood, topWood);
+    addGuitar(serialNumber, price, spec) {
+        let guitar = new guitar_1.Guitar(serialNumber, price, spec);
         __classPrivateFieldGet(this, _guitars).push(guitar);
     }
     getGuitar(serialNumber) {
@@ -33,28 +33,29 @@ class Inventory {
         }
         return null;
     }
-    search(searchGuitar) {
+    search(searchSpec) {
         for (let guitar of __classPrivateFieldGet(this, _guitars)) {
+            let guitarSpec = guitar.spec;
             // Ignore serial number since that's unique
             // Ignore price since that's unique
-            let builder = searchGuitar.builder;
-            if (builder !== null && builder !== guitar.builder) {
+            let builder = searchSpec.builder;
+            if (builder !== null && builder !== guitarSpec.builder) {
                 continue;
             }
-            let model = searchGuitar.model;
-            if (model !== null && model !== guitar.model) {
+            let model = searchSpec.model;
+            if (model !== null && model !== guitarSpec.model) {
                 continue;
             }
-            let type = searchGuitar.type;
-            if (type !== null && type !== guitar.type) {
+            let type = searchSpec.type;
+            if (type !== null && type !== guitarSpec.type) {
                 continue;
             }
-            let backWood = searchGuitar.backWood;
-            if (backWood !== null && backWood !== guitar.backWood) {
+            let backWood = searchSpec.backWood;
+            if (backWood !== null && backWood !== guitarSpec.backWood) {
                 continue;
             }
-            let topWood = searchGuitar.topWood;
-            if (topWood !== null && topWood !== guitar.topWood) {
+            let topWood = searchSpec.topWood;
+            if (topWood !== null && topWood !== guitarSpec.topWood) {
                 continue;
             }
             return guitar; // The book's version didn't had this line but I guess it was a honest mistake

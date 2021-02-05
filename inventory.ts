@@ -1,5 +1,6 @@
 import {Guitar} from "./guitar";
 import {Builder, Type, Wood} from "./types";
+import {GuitarSpec} from "./guitarSpec";
 
 export class Inventory {
     #guitars: Guitar[];
@@ -8,8 +9,8 @@ export class Inventory {
         this.#guitars = [];
     }
 
-    addGuitar(serialNumber: string, price: number, builder: Builder, model: string, type: Type, backWood: Wood, topWood: Wood) {
-        let guitar = new Guitar(serialNumber, price, builder, model, type, backWood, topWood);
+    addGuitar(serialNumber: string, price: number, spec: GuitarSpec) {
+        let guitar = new Guitar(serialNumber, price, spec);
         this.#guitars.push(guitar);
     }
 
@@ -23,33 +24,34 @@ export class Inventory {
         return null;
     }
 
-    search(searchGuitar: Guitar): Guitar {
+    search(searchSpec: GuitarSpec): Guitar {
         for (let guitar of this.#guitars) {
+            let guitarSpec = guitar.spec
             // Ignore serial number since that's unique
             // Ignore price since that's unique
 
-            let builder = searchGuitar.builder
-            if (builder !== null && builder !== guitar.builder) {
+            let builder = searchSpec.builder
+            if (builder !== null && builder !== guitarSpec.builder) {
                 continue;
             }
 
-            let model = searchGuitar.model;
-            if (model !== null && model !== guitar.model) {
+            let model = searchSpec.model;
+            if (model !== null && model !== guitarSpec.model) {
                 continue;
             }
 
-            let type = searchGuitar.type;
-            if (type !== null && type !== guitar.type) {
+            let type = searchSpec.type;
+            if (type !== null && type !== guitarSpec.type) {
                 continue;
             }
 
-            let backWood = searchGuitar.backWood;
-            if (backWood !== null && backWood !== guitar.backWood) {
+            let backWood = searchSpec.backWood;
+            if (backWood !== null && backWood !== guitarSpec.backWood) {
                 continue;
             }
 
-            let topWood = searchGuitar.topWood;
-            if (topWood !== null && topWood !== guitar.topWood) {
+            let topWood = searchSpec.topWood;
+            if (topWood !== null && topWood !== guitarSpec.topWood) {
                 continue;
             }
 
