@@ -105,3 +105,8 @@ dist
 
 # IntelliJ IDEA project config
 .idea
+
+# Generated files
+*.js
+*.js.map
+*.iml
