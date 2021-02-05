@@ -1,6 +1,6 @@
-import { Inventory } from "./inventory";
-import { Builder, Type, Wood } from "./types";
-import { GuitarSpec } from "./guitarSpec";
+import { Inventory } from "../lib/inventory";
+import { Builder, Type, Wood } from "../lib/types";
+import { GuitarSpec } from "../lib/guitarSpec";
 
 // Set up Rick's guitar inventory
 let inventory = new Inventory();
