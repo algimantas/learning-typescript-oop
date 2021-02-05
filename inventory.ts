@@ -1,6 +1,6 @@
-import {Guitar} from "./guitar";
-import {Builder, Type, Wood} from "./types";
-import {GuitarSpec} from "./guitarSpec";
+import { Guitar } from "./guitar";
+import { Builder, Type, Wood } from "./types";
+import { GuitarSpec } from "./guitarSpec";
 
 export class Inventory {
     #guitars: Guitar[];
@@ -14,7 +14,7 @@ export class Inventory {
         this.#guitars.push(guitar);
     }
 
-    getGuitar(serialNumber: string):Guitar {
+    getGuitar(serialNumber: string): Guitar {
         for (let guitar of this.#guitars) {
             if (guitar.serialNumber === serialNumber) {
                 return guitar;

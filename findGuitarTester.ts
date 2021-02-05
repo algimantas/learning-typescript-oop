@@ -1,7 +1,7 @@
-import {Inventory} from "./inventory";
-import {Builder, Type, Wood} from "./types";
-import {Guitar} from "./guitar";
-import {GuitarSpec} from "./guitarSpec";
+import { Inventory } from "./inventory";
+import { Builder, Type, Wood } from "./types";
+import { Guitar } from "./guitar";
+import { GuitarSpec } from "./guitarSpec";
 
 // Set up Rick's guitar inventory
 let inventory = new Inventory();
@@ -15,7 +15,7 @@ let guitar = inventory.search(whatErinLikes);
 if (guitar != null) {
     let spec = guitar.spec
     console.log('Erin, you might like this ' +
-        spec.builder + ' ' + spec.model +  ' ' +
+        spec.builder + ' ' + spec.model + ' ' +
         spec.type + ' guitar:\n   ' +
         spec.backWood + ' back and sides,\n   ' +
         spec.topWood + ' top.\nYou can have it for only $' +

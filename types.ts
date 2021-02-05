@@ -14,7 +14,7 @@ export enum Type {
 }
 
 export enum Wood {
-    indianRosewood = 'Indian Rosewood' ,
+    indianRosewood = 'Indian Rosewood',
     brazilianRosewood = 'Brazilian Rosewood',
     mahogany = 'Mahogany',
     maple = 'Maple',
