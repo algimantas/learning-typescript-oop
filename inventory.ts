@@ -37,7 +37,7 @@ export class Inventory {
             }
 
             let model = searchSpec.model;
-            if (model !== null && model !== guitarSpec.model) {
+            if (model !== null && model.toLowerCase() !== guitarSpec.model.toLowerCase()) {
                 continue;
             }
 
