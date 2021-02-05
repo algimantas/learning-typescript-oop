@@ -38,23 +38,23 @@ class Inventory {
             // Ignore serial number since that's unique
             // Ignore price since that's unique
             let builder = searchGuitar.builder;
-            if (builder !== null && builder !== "" && builder !== guitar.builder) {
+            if (builder !== null && builder !== guitar.builder) {
                 continue;
             }
             let model = searchGuitar.model;
-            if (model !== null && model !== "" && model !== guitar.model) {
+            if (model !== null && model !== guitar.model) {
                 continue;
             }
             let type = searchGuitar.type;
-            if (type !== null && type !== "" && type !== guitar.type) {
+            if (type !== null && type !== guitar.type) {
                 continue;
             }
             let backWood = searchGuitar.backWood;
-            if (backWood !== null && backWood !== "" && backWood !== guitar.backWood) {
+            if (backWood !== null && backWood !== guitar.backWood) {
                 continue;
             }
             let topWood = searchGuitar.topWood;
-            if (topWood !== null && topWood !== "" && topWood !== guitar.topWood) {
+            if (topWood !== null && topWood !== guitar.topWood) {
                 continue;
             }
             return guitar; // The book's version didn't had this line but I guess it was a honest mistake

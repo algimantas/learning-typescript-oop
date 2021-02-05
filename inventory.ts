@@ -1,4 +1,5 @@
 import {Guitar} from "./guitar";
+import {Builder, Type, Wood} from "./types";
 
 export class Inventory {
     #guitars: Guitar[];
@@ -7,7 +8,7 @@ export class Inventory {
         this.#guitars = [];
     }
 
-    addGuitar(serialNumber: string, price: number, builder: string, model: string, type: string, backWood: string, topWood: string) {
+    addGuitar(serialNumber: string, price: number, builder: Builder, model: string, type: Type, backWood: Wood, topWood: Wood) {
         let guitar = new Guitar(serialNumber, price, builder, model, type, backWood, topWood);
         this.#guitars.push(guitar);
     }
@@ -28,27 +29,27 @@ export class Inventory {
             // Ignore price since that's unique
 
             let builder = searchGuitar.builder
-            if (builder !== null && builder !== "" && builder !== guitar.builder) {
+            if (builder !== null && builder !== guitar.builder) {
                 continue;
             }
 
             let model = searchGuitar.model;
-            if (model !== null && model !== "" && model !== guitar.model) {
+            if (model !== null && model !== guitar.model) {
                 continue;
             }
 
             let type = searchGuitar.type;
-            if (type !== null && type !== "" && type !== guitar.type) {
+            if (type !== null && type !== guitar.type) {
                 continue;
             }
 
             let backWood = searchGuitar.backWood;
-            if (backWood !== null && backWood !== "" && backWood !== guitar.backWood) {
+            if (backWood !== null && backWood !== guitar.backWood) {
                 continue;
             }
 
             let topWood = searchGuitar.topWood;
-            if (topWood !== null && topWood !== "" && topWood !== guitar.topWood) {
+            if (topWood !== null && topWood !== guitar.topWood) {
                 continue;
             }
 
