@@ -8,16 +8,20 @@ initializeInventory(inventory);
 
 let whatErinLikes = new GuitarSpec(Builder.fender, 'Stratocastor', Type.electric, Wood.alder, Wood.alder);
 
-let guitar = inventory.search(whatErinLikes);
+let matchingGuitars = inventory.search(whatErinLikes);
 
-if (guitar != null) {
-    let spec = guitar.spec
-    console.log('Erin, you might like this ' +
-        spec.builder + ' ' + spec.model + ' ' +
-        spec.type + ' guitar:\n   ' +
-        spec.backWood + ' back and sides,\n   ' +
-        spec.topWood + ' top.\nYou can have it for only $' +
-        guitar.price + '!');
+if (matchingGuitars.length > 0) {
+    console.log('Erin, you might like these guitars:');
+    for (let guitar of matchingGuitars) {
+        let spec = guitar.spec
+        console.log(' We have a ' +
+            spec.builder + ' ' + spec.model + ' ' +
+            spec.type + ' guitar:\n   ' +
+            spec.backWood + ' back and sides,\n   ' +
+            spec.topWood + ' top.\n You can have it for only $' +
+            guitar.price + '!\n ----'
+        );
+    }
 } else {
     console.log('Sorry, Erin, we have nothing for you.');
 }

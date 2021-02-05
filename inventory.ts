@@ -23,7 +23,9 @@ export class Inventory {
         return null;
     }
 
-    search(searchSpec: GuitarSpec): Guitar {
+    search(searchSpec: GuitarSpec): Guitar[] {
+        let matchingGuitars: Guitar[] = []
+
         for (let guitar of this.#guitars) {
             let guitarSpec = guitar.spec
             // Ignore serial number since that's unique
@@ -54,9 +56,9 @@ export class Inventory {
                 continue;
             }
 
-            return guitar; // The book's version didn't had this line but I guess it was a honest mistake
+            matchingGuitars.push(guitar);
         }
 
-        return null;
+        return matchingGuitars;
     }
 }
