@@ -56,6 +56,10 @@ export class Inventory {
                 continue;
             }
 
+            if (searchSpec.numStrings !== guitarSpec.numStrings) {
+                continue;
+            }
+
             matchingGuitars.push(guitar);
         }
 
