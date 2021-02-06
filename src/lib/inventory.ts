@@ -14,6 +14,6 @@ export class Inventory {
     }
 
     search(searchSpec: GuitarSpec): Guitar[] {
-        return this.#guitars.filter((guitar) => guitar.spec.matches(searchSpec))
+        return this.#guitars.filter(guitar => guitar.spec.matches(searchSpec))
     }
 }
