@@ -2,11 +2,7 @@ import { Guitar } from "./guitar";
 import { GuitarSpec } from "./guitarSpec";
 
 export class Inventory {
-    #guitars: Guitar[];
-
-    constructor() {
-        this.#guitars = [];
-    }
+    #guitars: Guitar[] = [];
 
     addGuitar(serialNumber: string, price: number, spec: GuitarSpec) {
         let guitar = new Guitar(serialNumber, price, spec);
