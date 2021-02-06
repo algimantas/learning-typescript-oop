@@ -10,13 +10,7 @@ export class Inventory {
     }
 
     getGuitar(serialNumber: string): Guitar {
-        for (let guitar of this.#guitars) {
-            if (guitar.serialNumber === serialNumber) {
-                return guitar;
-            }
-        }
-
-        return null;
+        return this.#guitars.find(guitar => guitar.serialNumber === serialNumber)
     }
 
     search(searchSpec: GuitarSpec): Guitar[] {
