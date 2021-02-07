@@ -8,10 +8,7 @@ console.log('\nFrido barks to go outside...');
 remote.pressButton();
 
 console.log('\nFrido has gone outside');
-remote.pressButton();
 
 console.log('\nFrido\'s all done...');
-remote.pressButton();
 
 console.log('\nFrido\'s back inside...');
-remote.pressButton();
