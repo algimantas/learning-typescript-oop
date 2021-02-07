@@ -1,8 +1,8 @@
 import { Builder, Type, Wood } from "./types";
 
 export class GuitarSpec {
-    constructor(readonly builder: Builder, readonly model: string, readonly type: Type, readonly backWood: Wood,
-        readonly topWood: Wood, readonly numStrings: number = 6) { }
+    constructor(readonly builder: Builder, readonly model: string, readonly type: Type, readonly numStrings,
+        readonly backWood: Wood, readonly topWood: Wood) { }
 
     matches(search: GuitarSpec): boolean {
         if (search.builder !== undefined && this.builder !== search.builder) {
