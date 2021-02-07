@@ -6,8 +6,7 @@
     "outDir": "js/"
   },
   "include": [
-    "ricksGuitars/src/**/*",
-    "dogDoors/src/**/*",
+    "src/**/**/*"
   ],
   "exclude": [
     "node_modules"
