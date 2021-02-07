@@ -5,7 +5,9 @@
     "sourceMap": true,
     "outDir": "js/"
   },
-  "include": ["src/**/*"],
+  "include": [
+    "ricksGuitars/src/**/*"
+  ],
   "exclude": [
     "node_modules"
   ]
