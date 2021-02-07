@@ -5,23 +5,23 @@ export class GuitarSpec {
         readonly topWood: Wood, readonly numStrings: number = 6) { }
 
     matches(search: GuitarSpec): boolean {
-        if (search.builder !== null && this.builder !== search.builder) {
+        if (search.builder !== undefined && this.builder !== search.builder) {
             return false;
         }
 
-        if (search.model !== null && this.model.toLowerCase() !== search.model.toLowerCase()) {
+        if (search.model !== undefined && this.model.toLowerCase() !== search.model.toLowerCase()) {
             return false;
         }
 
-        if (search.type !== null && this.type !== search.type) {
+        if (search.type !== undefined && this.type !== search.type) {
             return false;
         }
 
-        if (search.backWood !== null && this.backWood !== search.backWood) {
+        if (search.backWood !== undefined && this.backWood !== search.backWood) {
             return false;
         }
 
-        if (search.topWood !== null && this.topWood !== search.topWood) {
+        if (search.topWood !== undefined && this.topWood !== search.topWood) {
             return false;
         }
 
