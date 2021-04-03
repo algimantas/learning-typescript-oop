@@ -3,6 +3,7 @@ import { Remote } from "../lib/Remote";
 import { BarkRecognizer } from "../lib/BarkRecognizer";
 
 function fridoFoolingAroundFor(miliseconds: number) {
+    console.log('\nFrido fooling around...');
     return new Promise<void>(resolve => {
         setTimeout(() => resolve(), miliseconds);
     });
@@ -11,7 +12,6 @@ function fridoFoolingAroundFor(miliseconds: number) {
 (async () => {
     let door = new DogDoor();
     let recognizer = new BarkRecognizer(door);
-    let remote = new Remote(door);
 
     console.log('\nFrido barks to go outside...');
     recognizer.recognize('Woof');

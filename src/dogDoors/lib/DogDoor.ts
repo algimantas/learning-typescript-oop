@@ -4,6 +4,7 @@ export class DogDoor {
     open() {
         console.log('The dog door opens.\n');
         this.#open = true;
+        setTimeout(() => this.close(), 5000);
     }
 
     close() {

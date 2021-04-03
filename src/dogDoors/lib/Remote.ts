@@ -10,8 +10,6 @@ export class Remote {
             this.door.close();
         } else {
             this.door.open();
-
-            setTimeout(() => this.door.close(), 5000);
         }
     }
 }
